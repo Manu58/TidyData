@@ -21,26 +21,22 @@ The dataset is downloaded as a zip archive from https://d396qusza40orc.cloudfron
 The accompanying run_analysis.R script takes care of this if the directory is nor present, at least on Unix systems. If not on UNIX then you will have to download and unpack the archive manually.
 the resulting directory structure is:  
 
-$$
-\begin{array}{lll}
-\text{test}&&\\
-&   \text{Inertial Signals} &\\
-&& \cdots (raw data files)\\
-& \text{subject_test.txt  (person id's for X_test.x)}   &\\
-& \text{X_test.x (main data)}  &\\
-& \text{y_test.txt (activities for X_test.x)}&\\
- \text{train}&&\\
-&   \text{Inertial Signals} &\\
-&& \cdots (raw data files)\\
-& \text{subject_train.txt  (person id's for rows of X_train.x)}   &\\
-& \text{X_train.x (main data)}  &\\
-& \text{y_train.txt  (activities for rows of X_train.x)}&\\
-  \text{activity_labels.txt (the activity names)}&&\\
-  \text{features.txt (feature names for main data)}&&\\
-  \text{features_info.txt}&&\\
-  \text{README.txt}&&\\
-\end{array}
-$$
+-**test**  
+------**Inertial Signals**  
+------------**...(raw data files)**  
+------**subject_test.txt  (person id's for X_test.x)**  
+------**X_test.x (main data)**  
+------**y_test.txt (activities for X_test.x)**  
+-**train**  
+------**Inertial Signals**  
+-------------**...(raw data files)**  
+------**subject_train.txt  (person id's for rows of X_train.x)**  
+------**X_train.x (main data)**  
+------**y_train.txt  (activities for rows of X_train.x)**  
+-**activity_labels.txt (the activity names)**  
+-**features.txt (feature names for main data)**  
+-**features_info.txt**  
+-**README.txt**  
 
 I decided not to make use of the raw data in the *Inertial Signals* directories, since their means are already included in the main dat file.
 The data files are all read in using read.table(), since fread() crashed on the larger datasets.  
